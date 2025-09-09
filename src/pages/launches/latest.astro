@@ -1,0 +1,25 @@
+---
+import LaunchCard from "@components/LaunchCard.astro";
+import Layout from "@layouts/Layout.astro";
+import LaunchGrid from "@components/LaunchGrid.astro";
+import { getLatestLaunches } from "@services/api";
+
+const launches = await getLatestLaunches();
+---
+
+<Layout title="SpaceX: Latest Launches">
+    <LaunchGrid>
+        {
+            launches?.map((launch) => (
+                <LaunchCard
+                    id={launch.id}
+                    image={launch.links.patch.small}
+                    details={launch.details}
+                    success={launch.success}
+                    name={launch.name}
+                    dateUTC={launch.date_utc}
+                />
+            ))
+        }
+    </LaunchGrid>
+</Layout>

@@ -1,0 +1,38 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { getLaunchById } from "@services/api";
+
+export const prerender = false;
+
+const { id } = Astro.params;
+
+let launch;
+if (id) {
+    launch = await getLaunchById({ id });
+}
+---
+
+<Layout title=`${launch?.name}` `>
+    <div class="bg-gray-800 px-6 pb-6 pt-[136px] md:pt-[88px] h-screen">
+        <article
+            class="flex justify-center items-center gap-y-6 flex-col mx-12"
+        >
+            {
+                launch?.links.patch.small ? (
+                    <img
+                        transition:name={`transition-${id}`}
+                        src={launch?.links.patch.small}
+                        alt={`Launch path of ${launch.name}`}
+                        class="h-56 mb-6"
+                    />
+                ) : (
+                    <span class="h-56 flex items-center justify-center mb-6 text-gray-100">
+                        🚀 No image
+                    </span>
+                )
+            }
+            <h2 class="text-4xl text-gray-100 font-bold">{launch?.name}</h2>
+            <p class="text-lg text-gray-300">{launch?.details}</p>
+        </article>
+    </div>
+</Layout>

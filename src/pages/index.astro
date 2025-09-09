@@ -1,11 +1,25 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import LaunchCard from "@components/LaunchCard.astro";
+import Layout from "@layouts/Layout.astro";
+import LaunchGrid from "@components/LaunchGrid.astro";
+import { getLaunches } from "@services/api";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const launches = await getLaunches();
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="SpaceX Launches">
+	<LaunchGrid>
+		{
+			launches?.map((launch) => (
+				<LaunchCard
+					id={launch.id}
+					image={launch.links.patch.small}
+					details={launch.details}
+					success={launch.success}
+					name={launch.name}
+					dateUTC={launch.date_utc}
+				/>
+			))
+		}
+	</LaunchGrid>
 </Layout>
