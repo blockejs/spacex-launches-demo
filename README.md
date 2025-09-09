@@ -1,46 +1,47 @@
-# Astro Starter Kit: Basics
+# SpaceX Launches
 
-```sh
-pnpm create astro@latest -- --template basics
+This project was born from the desire to practice and improve my skills with modern web development technologies. The main motivations were:
+
+Learning: Gain hands-on experience with Astro's capabilities
+Practice: Apply TypeScript and Tailwind CSS in a real project
+Sharing: Create code that can help other beginners
+Growth: Build something that showcases my learning journey
+
+# 🛠️ Technologies used
+Framework and Languages
+
+Astro - Modern web framework for fast websites
+TypeScript - JavaScript with static typing
+Tailwind CSS - Utility-first CSS framework
+
+## 🚀 Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/blockejs/spacex-launches-demo.git
+cd space-launches-demo
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+3. Start the development server:
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
 
-## 🧞 Commands
+4. Open your browser at `http://localhost:4321`
 
-All commands are run from the root of the project, from a terminal:
+# 🌐 Deployment
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+To build for production consult: [Astro On-Demand Rendering Guide](https://docs.astro.build/en/guides/on-demand-rendering/)
