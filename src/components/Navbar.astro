@@ -1,0 +1,74 @@
+---
+import Link from "@components/Link.astro";
+---
+
+<header
+    class="bg-gray-900 flex items-center px-6 py-2 justify-center md:justify-between fixed top-0 z-[4321] w-full md:h-16 h-28 md:flex-row flex-col gap-4"
+>
+    <h1 class="text-3xl font-extrabold tracking-tight text-gray-100">
+        SpaceX Launches
+    </h1>
+    <nav class="flex items-center justify-center gap-2">
+        <Link href="/">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-rocket-icon lucide-rocket"
+            >
+                <path
+                    d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"
+                ></path><path
+                    d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"
+                ></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"
+                ></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"
+                ></path>
+            </svg>
+            All
+        </Link>
+        <Link href="/launches/latest">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-clock-arrow-up-icon lucide-clock-arrow-up"
+            >
+                <path d="M12 6v6l1.56.78"></path><path
+                    d="M13.227 21.925a10 10 0 1 1 8.767-9.588"></path><path
+                    d="m14 18 4-4 4 4"></path><path d="M18 22v-8"> </path>
+            </svg>
+            Latest
+        </Link>
+        <Link href="/launches/past">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-clock-arrow-down-icon lucide-clock-arrow-down"
+            >
+                <path d="M12 6v6l2 1"></path><path
+                    d="M12.337 21.994a10 10 0 1 1 9.588-8.767"></path><path
+                    d="m14 18 4 4 4-4"></path><path d="M18 14v8"></path>
+            </svg>
+            Past
+        </Link>
+    </nav>
+</header>

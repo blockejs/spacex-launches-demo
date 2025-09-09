@@ -1,0 +1,63 @@
+---
+interface Props {
+    id: string;
+    image: string;
+    details: string | null;
+    success: boolean;
+    name: string;
+    dateUTC: Date;
+}
+
+const { id, image, details, success, name, dateUTC } = Astro.props;
+const successText = success ? "Success" : "Failure";
+---
+
+<a
+    href=`/launches/${id}`
+    class="bg-gray-600 outline outline-gray-400 rounded-lg place-items-center flex flex-col p-4 hover:scale-105 hover:bg-gray-500 transition ease-in-out"
+>
+    {
+        image ? (
+            <img
+                transition:name={`transition-${id}`}
+                src={image}
+                alt={`Launch path of ${name}`}
+                class="h-56 mb-6"
+            />
+        ) : (
+            <span class="h-56 flex items-center justify-center mb-6 text-gray-100">
+                🚀 No image
+            </span>
+        )
+    }
+
+    <div class="flex flex-col w-full">
+        <span
+            class:list={[
+                "text-xs font-semibold mr-auto px-2 rounded",
+                {
+                    "bg-green-500 text-gray-900": success,
+                    "bg-red-500 text-gray-900": !success,
+                },
+            ]}>{successText}</span
+        >
+
+        <h2 class="my-2 text-2xl font-bold tracking-tight text-gray-100">
+            {name} | {
+                new Date(dateUTC).toLocaleDateString("en-US", {
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric",
+                })
+            }
+        </h2>
+
+        <p class="text-gray-300 tracking-tight">
+            {
+                details && details?.length > 100
+                    ? details?.slice(0, 100) + "..."
+                    : details
+            }
+        </p>
+    </div>
+</a>
