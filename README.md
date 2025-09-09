@@ -18,7 +18,7 @@ Growth: Build something that showcases my learning journey
 1. Clone the repository:
 ```bash
 git clone https://github.com/blockejs/spacex-launches-demo.git
-cd space-launches-demo
+cd spacex-launches-demo
 ```
 
 2. Install dependencies:
