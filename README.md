@@ -7,12 +7,11 @@ Practice: Apply TypeScript and Tailwind CSS in a real project
 Sharing: Create code that can help other beginners
 Growth: Build something that showcases my learning journey
 
-# 🛠️ Technologies used
-Framework and Languages
+## 🛠️ Technologies used
 
-Astro - Modern web framework for fast websites
-TypeScript - JavaScript with static typing
-Tailwind CSS - Utility-first CSS framework
+- **[Astro](https://astro.build/)** - Modern web framework for fast websites
+- **[TypeScript](https://www.typescriptlang.org/)** - JavaScript with static typing
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
 
 ## 🚀 Installation
 
@@ -42,6 +41,6 @@ pnpm dev
 
 4. Open your browser at `http://localhost:4321`
 
-# 🌐 Deployment
+## 🌐 Deployment
 
 To build for production consult: [Astro On-Demand Rendering Guide](https://docs.astro.build/en/guides/on-demand-rendering/)
