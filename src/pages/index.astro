@@ -1,14 +1,14 @@
 ---
 import LaunchCard from "@components/LaunchCard.astro";
 import Layout from "@layouts/Layout.astro";
-import LaunchGrid from "@components/LaunchGrid.astro";
+import LaunchMain from "@components/LaunchMain.astro";
 import { getLaunches } from "@services/api";
 
 const launches = await getLaunches();
 ---
 
 <Layout title="SpaceX Launches">
-	<LaunchGrid>
+	<LaunchMain>
 		{
 			launches?.map((launch) => (
 				<LaunchCard
@@ -21,5 +21,5 @@ const launches = await getLaunches();
 				/>
 			))
 		}
-	</LaunchGrid>
+	</LaunchMain>
 </Layout>
